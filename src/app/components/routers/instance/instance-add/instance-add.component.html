@@ -1,0 +1,221 @@
+<mat-toolbar>
+  <div class="header-bar">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item-active">
+        <a [routerLink]="'/instances'">{{ "CLIENTI" }}</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a>{{ step === 1 ? "NUOVO CLIENTE 1/2" : "NUOVO CLIENTE 2/2" }}</a>
+      </li>
+    </ol>
+  </div>
+</mat-toolbar>
+
+<div class="container container-detail">
+  <form
+    *ngIf="step === 1"
+    [formGroup]="options"
+    (submit)="onOperation(operation.Continue)"
+  >
+    <h2 class="title">Dati cliente</h2>
+    <p class="form-paragraph">
+      {{
+        "Inserisci il nome che verrà applicato al dominio e la data di scadenza del contratto nella sezione dedicata"
+      }}
+    </p>
+
+    <div class="form-dubble-column">
+      <app-dynamic-input
+        label="Nome*"
+        placeholder="Nome"
+        [control]="domainNameControl"
+        errorMessageRequired="Inserisci un nome"
+        [isSmall]="true"
+      ></app-dynamic-input>
+
+      <app-dynamic-input-date
+        label="Scadenza contratto*"
+        placeholder="dd-mm-aaaa"
+        [control]="contractExpiryControl"
+        errorMessageRequired="Inserisci una data"
+        [invalidKey]="'invalidDate'"
+        [errorMessageInvalid]="'Inserisci una data valida'"
+        [isSmall]="true"
+      ></app-dynamic-input-date>
+    </div>
+
+    <p class="form-paragraph">
+      Seleziona gli intervalli temporali per la disattivazione del servizio in
+      caso di inadempienze da parte del cliente
+    </p>
+
+    <div class="form-dubble-column">
+      <app-dynamic-select
+        label="Primo intervallo*"
+        placeholder="Seleziona"
+        [control]="serviceDeactivationFirstIntervalControl"
+        errorMessageRequired="Seleziona un intervallo"
+        [options]="firstIntervalList()"
+        [tooltipHelp]="
+          'Scegli il tempo che deve passare tra la scadenza del contratto e il blocco delle risposte'
+        "
+        [isSmall]="true"
+      ></app-dynamic-select>
+
+      <app-dynamic-select
+        label="Secondo intervallo*"
+        placeholder="Seleziona"
+        [control]="serviceDeactivationSecondIntervalControl"
+        errorMessageRequired="Seleziona un intervallo"
+        [options]="secondIntervalList()"
+        [tooltipHelp]="
+          'Scegli il tempo che deve passare tra l\'inizio della prima fase e quello della seconda e poi tra la seconda e la terza'
+        "
+        [isSmall]="true"
+      ></app-dynamic-select>
+    </div>
+
+    <mat-label class="form-label"
+      >Dati referente<app-tool-tip-icon
+        [tooltipHelp]="'I dati riferiscono al primo admin di questa istanza'"
+      ></app-tool-tip-icon
+    ></mat-label>
+    <p class="form-paragraph">
+      Inserisci i dati del referente a cui verrà inviata la procedura per il
+      primo accesso
+    </p>
+
+    <div class="form-dubble-column">
+      <app-dynamic-input
+        label="Nome*"
+        placeholder="Nome"
+        [control]="referenceDataNameControl"
+        errorMessageRequired="Inserisci un nome"
+        [isSmall]="true"
+      ></app-dynamic-input>
+
+      <app-dynamic-input
+        label="Cognome*"
+        placeholder="Cognome"
+        [control]="referenceDataLastNameControl"
+        errorMessageRequired="Inserisci un cognome"
+        [isSmall]="true"
+      ></app-dynamic-input>
+    </div>
+
+    <app-dynamic-input
+      label="Indirizzo email*"
+      placeholder="Email"
+      [control]="referenceDataEmailControl"
+      errorMessageRequired="Inserisci un'email"
+      [invalidKey]="'invalidEmail'"
+      [errorMessageInvalid]="'Inserisci un indirizzo valido'"
+    ></app-dynamic-input>
+
+    <br />
+    <!-- button -->
+    <div class="form-button-container">
+      <button
+        mat-stroked-button
+        class="form-button-cancel"
+        type="button"
+        (click)="cancel()"
+      >
+        Annulla
+      </button>
+      <button
+        mat-flat-button
+        class="form-button-confirm"
+        type="submit"
+        [disabled]="!options.valid"
+      >
+        Continua
+      </button>
+    </div>
+  </form>
+  <form
+    *ngIf="step === 2"
+    [formGroup]="optionsPackage"
+    (submit)="onOperation(operation.Craete)"
+  >
+    <h2 class="title">Pacchetto</h2>
+    <p class="form-paragraph">
+      {{
+        "Scegli tra pacchetti di servizi esistenti o crea una configurazione personalizzata di componenti adatti alle esigenze specifiche del cliente"
+      }}
+    </p>
+
+    <div class="container-row">
+      <app-dynamic-autocomplete
+        style="min-width: 640px"
+        *ngIf="!packageIsLoading()"
+        label="Nome pacchetto"
+        placeholder="Scegli esistente"
+        [control]="packageIdControl"
+        errorMessageRequired="Seleziona un pacchetto"
+        [options]="packageList()"
+        [filteredOptions]="packageList"
+      ></app-dynamic-autocomplete>
+      <a
+        (click)="openPackageDialog()"
+        class="btn btn-blue-outline-border"
+        [style.pointer-events]="!packageIdControl.value ? 'none' : 'auto'"
+        [style.opacity]="!packageIdControl.value ? '0.5' : '1'"
+        [style.margin-bottom]="'4px'"
+        dis
+        matTooltip="Modifica"
+        matTooltipPosition="below"
+        matTooltipClass="tooltip"
+        matTooltipShowDelay="500"
+        matTooltipHideDelay="0"
+      >
+        <mat-icon>description</mat-icon>
+      </a>
+    </div>
+    <div style="display: flex; align-items: center">
+      <a
+        (click)="goToCreatePackage()"
+        matTooltip="Creazione pacchetto"
+        matTooltipPosition="right"
+        matTooltipClass="tooltip"
+        matTooltipShowDelay="500"
+        matTooltipHideDelay="0"
+      >
+        <mat-icon style="padding-bottom: 8px; color: #0161a3"
+          >add_circle_outline</mat-icon
+        >
+      </a>
+      <p
+        style="
+          display: inline-block;
+          padding-left: 10px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 19px;
+        "
+      >
+        Crea nuovo
+      </p>
+    </div>
+    <p>Clicca sul pulsante per creare un nuovo pacchetto</p>
+
+    <div class="form-button-container">
+      <button
+        mat-stroked-button
+        class="form-button-cancel"
+        type="button"
+        (click)="back()"
+      >
+        Indietro
+      </button>
+      <button
+        mat-flat-button
+        class="form-button-confirm"
+        type="submit"
+        [disabled]="!optionsPackage.valid"
+      >
+        Attiva
+      </button>
+    </div>
+  </form>
+</div>

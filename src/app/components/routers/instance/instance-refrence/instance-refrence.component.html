@@ -1,0 +1,16 @@
+<mat-card-header>
+  <div class="container-label">
+    <p class="label-card">Dati referente<app-tool-tip-icon
+      [tooltipHelp]="'Dati del referente al momento della prima attivazione'"
+    ></app-tool-tip-icon></p>
+    <div class="btn-container-label" *ngIf="showActions"></div>
+  </div>
+</mat-card-header>
+<mat-card-content>
+  <p class="label-card">Nome</p>
+  <p>{{ item().referenceData?.name }}</p>
+  <p class="label-card">Cognome</p>
+  <p>{{ item().referenceData?.lastName }}</p>
+  <p class="label-card">Indirizzo email</p>
+  <p>{{ item().referenceData?.email }}</p>
+</mat-card-content>

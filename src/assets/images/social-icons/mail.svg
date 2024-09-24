@@ -1,0 +1,7 @@
+<svg id="Icona_mail" data-name="Icona mail" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path id="Tracciato_91131" data-name="Tracciato 91131" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" fill="#80352a"/>
+  <g id="Mail_outlined" data-name="Mail outlined" transform="translate(8 8)">
+    <rect id="Rettangolo_6802" data-name="Rettangolo 6802" width="16" height="16" fill="none"/>
+    <path id="Icon_material-mail-outline" data-name="Icon material-mail-outline" d="M16.4,4H3.6A1.6,1.6,0,0,0,2.008,5.6L2,15.2a1.6,1.6,0,0,0,1.6,1.6H16.4A1.6,1.6,0,0,0,18,15.2V5.6A1.6,1.6,0,0,0,16.4,4Zm0,11.2H3.6v-8l6.4,4,6.4-4ZM10,9.6l-6.4-4H16.4Z" transform="translate(-2 -2.401)" fill="#fff"/>
+  </g>
+</svg>

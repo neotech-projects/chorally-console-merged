@@ -1,0 +1,9 @@
+{
+    "production": false,
+    "baseUrl": "https://api.dev.chorally.com",
+    "outh2": {
+        "url": "https://keycloak.dev.chorally.com/",
+        "realm": "Console",
+        "clientId": "service-api-local"
+    }
+}

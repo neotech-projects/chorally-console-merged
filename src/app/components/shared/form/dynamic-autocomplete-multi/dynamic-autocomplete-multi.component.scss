@@ -1,0 +1,19 @@
+.small {
+  max-width: 320px;
+  display: flex;
+  padding-left: 0 12px;
+  padding-right: 0 12px;
+}
+
+mat-icon {
+  margin-right: -18px;
+  margin-bottom: 8px;
+}
+
+.search-inpout-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}

@@ -1,0 +1,18 @@
+
+<div class="form-control-container">
+  <mat-label class="form-label">{{ label }}<app-tool-tip-icon *ngIf="tooltipHelp" [tooltipHelp]="tooltipHelp"></app-tool-tip-icon></mat-label>
+  <mat-form-field style="width: 100%;" [ngClass]="{ 'small': isSmall}">
+    <input
+      type="date"
+      matInput
+      placeholder="{{ placeholder }}"
+      [formControl]="control"
+    />
+    <mat-error *ngIf="control.hasError('required')">
+      {{ errorMessageRequired }}
+    </mat-error>
+    <mat-error *ngIf="control.hasError(invalidKey)">
+      {{ errorMessageInvalid }}
+    </mat-error>
+  </mat-form-field>
+</div>

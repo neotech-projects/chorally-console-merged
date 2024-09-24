@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <div class="header-bar">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item-active">
+        <a [routerLink]="'/instances'">{{ "CLIENTI" }}</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a *ngIf="item().domainName">{{ item().domainName }}</a>
+      </li>
+    </ol>
+    <div class="btn-list-container-end">
+      <a class="btn btn-violet-outline" *ngIf="id && item().status === clientState.Activated"  (click)="pause()">
+        <mat-icon>pause</mat-icon>
+      </a>
+      <a class="btn btn-violet-outline" *ngIf="id && item().status === clientState.Paused" (click)="activate()">
+        <mat-icon>play_arrow</mat-icon>
+      </a>
+      <a class="btn btn-violet-outline" *ngIf="id" (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </div>
+  </div>
+</mat-toolbar>
+<div class="container container-detail" *ngIf="!loading">
+  <h2 class="title">Dati cliente</h2>
+  <p class="label-card">Nome cliente:</p>
+  <p>{{ item().domainName }}</p>
+  <p class="label-card">Dominio</p>
+  <p>
+    <a  class="domain-link" (click)="outLink(item().domain)"
+    style="text-decoration: none !important;"
+      >{{ item().domain }}
+      <mat-icon
+        style="font-size: 18px; width: 18px; height: 18px;"
+        class="icon-link"
+        >open_in_new</mat-icon
+      ></a
+    >
+  </p>
+  <hr class="detail-separator" />
+  <app-instance-status [item]="item" (onUpdate)="getInstance()"></app-instance-status>
+  <hr class="detail-separator" />
+  <app-instance-refrence [item]="item"></app-instance-refrence>
+  
+  <hr class="detail-separator" />
+  <app-list-links-for-client [clientName]="item().domainName"></app-list-links-for-client>
+  
+  <hr class="detail-separator" />
+  <app-instance-package-detail [item]="itemPackage" [itemInstance]="item" (onUpdate)="getInstance()"></app-instance-package-detail>
+</div>

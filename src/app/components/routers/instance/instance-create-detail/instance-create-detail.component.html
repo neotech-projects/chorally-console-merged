@@ -1,0 +1,29 @@
+<div class="container container-detail-small">
+  <h2 class="title">Creazione cliente</h2>
+  <p>
+    Conferma la creazione di una nuova istanza. Di seguito, l’elenco dettagliato
+    del pacchetto scelto
+  </p>
+  <p class="label-card">Nome cliente:</p>
+  <p>{{ item.domainName }}</p>
+
+  <p class="label-card">Nome pacchetto:</p>
+  <p>{{ itemPackage.name }}</p>
+
+  <p class="label-card">Canali attivi:</p>
+  <p>{{ getChannelsNames(itemPackage.channels) }}</p>
+
+  <p class="label-card">Moduli:</p>
+  <p>{{ getModuleNames(itemPackage.modules) }}</p>
+
+  <p class="label-card">Funzionalità:</p>
+  <p>{{ getFunctionNames(itemPackage.functions) }}</p>
+
+  <p class="label-card">Scadenza:</p>
+  <p>{{ item.contractExpiry | date : "dd/MM/yyyy" }}</p>
+
+  <p class="label-card">Referente:</p>
+  <p>{{ item.referenceData?.name + " " + item.referenceData?.lastName }}</p>
+  <p>{{ item.referenceData?.email }}</p>
+
+</div>

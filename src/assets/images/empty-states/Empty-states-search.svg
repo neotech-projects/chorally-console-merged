@@ -1,0 +1,23 @@
+<svg id="Empty_states_-_search" data-name="Empty states - search" xmlns="http://www.w3.org/2000/svg" width="200" height="130" viewBox="0 0 200 130">
+  <g id="Rectangle_16334" data-name="Rectangle 16334" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="200" height="130" stroke="none"/>
+    <rect x="0.5" y="0.5" width="199" height="129" fill="none"/>
+  </g>
+  <g id="Group_103012" data-name="Group 103012" transform="translate(-672 -276)">
+    <circle id="Ellipse_2015" data-name="Ellipse 2015" cx="45" cy="45" r="45" transform="translate(729 279)" fill="#fff"/>
+    <path id="Icon_weather-stars" data-name="Icon weather-stars" d="M10.734,15.507a10.092,10.092,0,0,0,7.049-3.228,10.052,10.052,0,0,0,2.9-7.2,10.052,10.052,0,0,0,2.9,7.2,10.192,10.192,0,0,0,7.071,3.228,10.178,10.178,0,0,0-5.029,1.559A10.552,10.552,0,0,0,22,20.865a10.326,10.326,0,0,0-1.318,5.116,10.1,10.1,0,0,0-2.9-7.225A10.026,10.026,0,0,0,10.734,15.507Z" transform="translate(836.266 305.924)" fill="#cccccf"/>
+    <path id="Icon_weather-stars-2" data-name="Icon weather-stars" d="M10.734,13.823a8.463,8.463,0,0,0,5.911-2.707,8.429,8.429,0,0,0,2.431-6.04,8.429,8.429,0,0,0,2.431,6.04,8.546,8.546,0,0,0,5.929,2.707,8.535,8.535,0,0,0-4.217,1.307,8.849,8.849,0,0,0-3.038,3.186,8.659,8.659,0,0,0-1.1,4.29,8.472,8.472,0,0,0-2.431-6.058A8.407,8.407,0,0,0,10.734,13.823Z" transform="translate(674.266 319.924)" fill="#cccccf"/>
+    <path id="Ellisse_2016" data-name="Ellisse 2016" d="M5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2m0-2A5.5,5.5,0,1,1,0,5.5,5.5,5.5,0,0,1,5.5,0Z" transform="translate(706 290)" fill="#cccccf"/>
+    <path id="Ellisse_2017" data-name="Ellisse 2017" d="M4,2A2,2,0,1,0,6,4,2,2,0,0,0,4,2M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" transform="translate(830 330)" fill="#cccccf"/>
+    <path id="Poligono_17" data-name="Poligono 17" d="M7.5,4s0,0,0,0L3.463,11h8.074s0,0,0,0L7.5,4h0m0-2A1.981,1.981,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10L5.768,3A1.981,1.981,0,0,1,7.5,2Z" transform="matrix(-0.799, -0.602, 0.602, -0.799, 685.609, 314.531)" fill="#cccccf"/>
+    <path id="Poligono_18" data-name="Poligono 18" d="M7.5,4s0,0,0,0L3.463,11h8.074s0,0,0,0L7.5,4h0m0-2A1.981,1.981,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10L5.768,3A1.981,1.981,0,0,1,7.5,2Z" transform="translate(870.029 381.235) rotate(120)" fill="#cccccf"/>
+    <g id="Group_103142" data-name="Group 103142" transform="translate(721.299 283.296)">
+      <rect id="Rectangle_16337" data-name="Rectangle 16337" width="3.38" height="21.047" transform="translate(37.018 66.782) rotate(-135)" fill="#e3e3e6"/>
+      <circle id="Ellipse_2016" data-name="Ellipse 2016" cx="31.255" cy="31.255" r="31.255" transform="translate(38.894 0.001)" fill="#cccccf"/>
+      <circle id="Ellipse_2017" data-name="Ellipse 2017" cx="24.562" cy="24.562" r="24.562" transform="translate(45.587 6.694)" fill="#f2f2f5"/>
+      <path id="Path_91996" data-name="Path 91996" d="M284.033,68.309a1.69,1.69,0,0,1-1.2-2.885,19.424,19.424,0,0,1,27.47,0,1.69,1.69,0,1,1-2.39,2.39,16.045,16.045,0,0,0-22.69,0A1.685,1.685,0,0,1,284.033,68.309Z" transform="translate(-226.424 -47.903)" fill="#fff"/>
+      <path id="Path_91997" data-name="Path 91997" d="M37.314,333.433,11.243,359.5C8.528,362.219,5.71,360.632,3,357.917s-4.3-5.532-1.587-8.248L27.48,323.6l8.1,1.73Z" transform="translate(0 -259.507)" fill="#4c4c4e"/>
+      <path id="Path_91998" data-name="Path 91998" d="M151.755,309.152l-3.176,3.176-9.835-9.835,3.176-3.176a6.954,6.954,0,0,1,9.835,9.835Z" transform="translate(-111.266 -238.402)" fill="#89898b"/>
+    </g>
+  </g>
+</svg>

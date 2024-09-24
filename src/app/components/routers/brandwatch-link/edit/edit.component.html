@@ -1,0 +1,61 @@
+<mat-toolbar *ngIf="!fromInstanceDetail">
+    <div class="header-bar">        
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item-active">
+                <a  [routerLink]="'/settings'">{{ "IMPOSTAZIONI" }}</a>
+            </li>
+            <li class="breadcrumb-item-active">
+                <a  [routerLink]="'/settings/monitoring'">{{ "MONITORING" }}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a>{{'MODIFICA ASSOCIAZIONI'}} - {{nomeCliente}} - {{nomeProgetto}}</a>
+            </li>
+        </ol>
+    </div>
+</mat-toolbar>
+
+<h3 *ngIf="fromInstanceDetail">Progetto {{nomeProgetto}}
+    <a style="vertical-align: top; margin-top: -10px;" title="Elimina associazioni progetto" (click)="dissociaAll(nomeProgetto, nomeCliente, idProgetto)" mat-icon-button>
+        <mat-icon>delete</mat-icon>
+    </a>  
+</h3>
+
+<div class="container" style="width: 40%; background-color: white; padding: 20px;">
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="listQueriesProjectsBW.length" >
+
+        <!-- Toggle stato -->
+        <div style="width: 100%; display: flex; align-items: center;" >
+            <app-switch style="width: 80%; vertical-align: middle;"
+                [checked]="stateProject.value ?? false"  
+                [control]="stateProject"  
+                [label]="'Stato Progetto'" 
+                (change)="onStatoProgettoChange($event)">
+            </app-switch>
+
+        </div>
+
+        <mat-form-field style="width: 100%" class="small">
+            <mat-label>Seleziona query</mat-label>
+            <mat-select formControlName="queries" multiple (selectionChange)="onQueriesSelectionChange($event)">
+                <mat-option *ngFor="let query of listQueriesProjectsBW" [value]="query.codiceQuery">
+                    {{ query.nomeQuery }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="form-control-container" style="width:50%">
+            
+            <button *ngIf="!fromInstanceDetail"
+            mat-stroked-button
+            class="form-button-cancel"
+            
+            [routerLink]="['/settings/monitoring/']"
+            type="button">
+            Annulla
+            </button>
+    
+            <button style="margin-left: 200px;" type="submit" mat-flat-button class="form-button-confirm">Salva</button>
+        </div>        
+    </form>
+</div>

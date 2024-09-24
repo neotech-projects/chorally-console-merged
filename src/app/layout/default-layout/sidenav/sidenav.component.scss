@@ -1,0 +1,124 @@
+:host * {
+  transition: all 500ms ease-in-out;
+}
+.sidenav-header {
+  background-color: #016176;
+  // color: #ffffff !important;
+  padding: 16px;
+  text-align: center;
+
+  > img {
+    border-radius: 100%;
+    margin-bottom: 10px;
+  }
+
+  img:hover {
+    transform: rotate(360deg);
+  }
+}
+
+a.mdc-list-item--activated,
+a.mdc-list-item--activated .mat-icon,
+a.mdc-list-item--activated span,
+a[ng-reflect-activated="true"],
+a[ng-reflect-activated="true"] .mat-icon,
+a[ng-reflect-activated="true"] span {
+  color: #016176 !important;
+  // background-color: #ffffff !important;
+}
+
+a:not(.mdc-list-item--activated),
+a:not(.mdc-list-item--activated) .mat-icon,
+a:not(.mdc-list-item--activated) span,
+a[ng-reflect-activated="false"],
+a[ng-reflect-activated="false"] .mat-icon,
+a[ng-reflect-activated="false"] span {
+  color: #ffffff !important;
+  // background-color: #016176 !important;
+  // filter: invert(1);
+}
+
+.mat-icon {
+  font-size: 26px !important;
+}
+
+.selected-menu-item {
+  // border-left: 5px solid #016176 !important;
+  background-color: #ffffff !important;
+}
+
+.menu-item {
+  // border-left: 5px solid transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.menu-items-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.mdc-list-item {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+mat-chip {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px !important;
+  height: 28px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 10px;
+  // padding-top: 6px;
+  padding-left: 2px;
+}
+
+.chip-disactive:hover {
+  background-color: #0384a1 !important;
+}
+
+.chip-active {
+  background-color: #ffffff !important;
+  color: #016176 !important;
+}
+
+.chip-active:hover {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.list-item-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.list-item-text {
+  text-align: center;
+  font-size: 9px;
+  padding-bottom: 8px;
+  margin: 0;
+  transition: visibility 0.3s;
+  opacity: 0.8;
+}
+
+.menu-item .list-item-text {
+  visibility: hidden;
+}
+
+.menu-item:hover .list-item-text {
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+*:active,
+*:visited,
+*:focus {
+  background: #ffffff !important;
+}

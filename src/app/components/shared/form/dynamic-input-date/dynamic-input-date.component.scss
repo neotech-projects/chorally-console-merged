@@ -1,0 +1,10 @@
+.small {
+  max-width: 320px;
+  display: flex;
+  padding-left: 0 12px;
+  padding-right: 0 12px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+}

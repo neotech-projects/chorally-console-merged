@@ -1,0 +1,27 @@
+<svg id="Empty_state_-_agents" data-name="Empty state - agents" xmlns="http://www.w3.org/2000/svg" width="200" height="130" viewBox="0 0 200 130">
+  <g id="Rectangle_16334" data-name="Rectangle 16334" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+    <rect width="200" height="130" stroke="none"/>
+    <rect x="0.5" y="0.5" width="199" height="129" fill="none"/>
+  </g>
+  <g id="Group_103012" data-name="Group 103012" transform="translate(-672 -276)">
+    <circle id="Ellipse_2015" data-name="Ellipse 2015" cx="45" cy="45" r="45" transform="translate(729 279)" fill="#fff"/>
+    <path id="Icon_weather-stars" data-name="Icon weather-stars" d="M10.734,15.507a10.092,10.092,0,0,0,7.049-3.228,10.052,10.052,0,0,0,2.9-7.2,10.052,10.052,0,0,0,2.9,7.2,10.192,10.192,0,0,0,7.071,3.228,10.178,10.178,0,0,0-5.029,1.559A10.552,10.552,0,0,0,22,20.865a10.326,10.326,0,0,0-1.318,5.116,10.1,10.1,0,0,0-2.9-7.225A10.026,10.026,0,0,0,10.734,15.507Z" transform="translate(836.266 305.924)" fill="#cccccf"/>
+    <path id="Icon_weather-stars-2" data-name="Icon weather-stars" d="M10.734,13.823a8.463,8.463,0,0,0,5.911-2.707,8.429,8.429,0,0,0,2.431-6.04,8.429,8.429,0,0,0,2.431,6.04,8.546,8.546,0,0,0,5.929,2.707,8.535,8.535,0,0,0-4.217,1.307,8.849,8.849,0,0,0-3.038,3.186,8.659,8.659,0,0,0-1.1,4.29,8.472,8.472,0,0,0-2.431-6.058A8.407,8.407,0,0,0,10.734,13.823Z" transform="translate(674.266 319.924)" fill="#cccccf"/>
+    <path id="Ellisse_2016" data-name="Ellisse 2016" d="M5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2m0-2A5.5,5.5,0,1,1,0,5.5,5.5,5.5,0,0,1,5.5,0Z" transform="translate(706 290)" fill="#cccccf"/>
+    <path id="Ellisse_2017" data-name="Ellisse 2017" d="M4,2A2,2,0,1,0,6,4,2,2,0,0,0,4,2M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" transform="translate(830 330)" fill="#cccccf"/>
+    <path id="Poligono_17" data-name="Poligono 17" d="M7.5,4s0,0,0,0L3.463,11h8.074s0,0,0,0L7.5,4h0m0-2A1.981,1.981,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10L5.768,3A1.981,1.981,0,0,1,7.5,2Z" transform="matrix(-0.799, -0.602, 0.602, -0.799, 685.609, 314.531)" fill="#cccccf"/>
+    <path id="Poligono_18" data-name="Poligono 18" d="M7.5,4s0,0,0,0L3.463,11h8.074s0,0,0,0L7.5,4h0m0-2A1.981,1.981,0,0,1,9.232,3l4.037,7a2,2,0,0,1-1.732,3H3.463A2,2,0,0,1,1.73,10L5.768,3A1.981,1.981,0,0,1,7.5,2Z" transform="translate(870.029 381.235) rotate(120)" fill="#cccccf"/>
+    <g id="users-young-svgrepo-com" transform="translate(696.474 296.672)">
+      <path id="Path_91606" data-name="Path 91606" d="M243.438,18.809h0A30.111,30.111,0,0,0,213.327,48.92v13.7h60.222V48.92A30.111,30.111,0,0,0,243.438,18.809Z" transform="translate(-166.412 -18.809)" fill="#cccccf"/>
+      <path id="Path_91607" data-name="Path 91607" d="M331.866,18.808h0a30.314,30.314,0,0,0-5.182.446,30.119,30.119,0,0,1,24.93,29.666v13.7h10.363v-13.7A30.111,30.111,0,0,0,331.866,18.808Z" transform="translate(-254.839 -18.808)" opacity="0.1"/>
+      <g id="Group_102919" data-name="Group 102919" transform="translate(43.906 35.905)">
+        <path id="Path_91608" data-name="Path 91608" d="M207.04,182.07a7.4,7.4,0,0,0-7.4,7.4h0a7.4,7.4,0,0,0,7.4,7.4h3.6V182.07Z" transform="translate(-199.645 -182.07)" fill="#f2f2f5"/>
+        <path id="Path_91609" data-name="Path 91609" d="M454.463,182.07a7.4,7.4,0,0,1,7.4,7.4h0a7.4,7.4,0,0,1-7.4,7.4h-3.6V182.07Z" transform="translate(-395.618 -182.07)" fill="#f2f2f5"/>
+      </g>
+      <path id="Path_91610" data-name="Path 91610" d="M259.638,417.263a38.492,38.492,0,0,0-21.616-21.347l-.155-.059H210.262a38.493,38.493,0,0,0-21.771,21.406h71.147Z" transform="translate(-147.038 -312.936)" fill="#cccccf"/>
+      <path id="Path_91611" data-name="Path 91611" d="M309.112,338.579V324.685H293.459v13.894a38.122,38.122,0,0,0-5.976,1.759,14.319,14.319,0,0,0,27.605,0A38.111,38.111,0,0,0,309.112,338.579Z" transform="translate(-224.259 -257.416)" fill="#ededf0"/>
+      <path id="Path_91612" data-name="Path 91612" d="M314.657,324.683V337.5a33.581,33.581,0,0,0,15.653,0V324.683Z" transform="translate(-245.457 -257.414)" fill="#6f6f72" opacity="0.1"/>
+      <path id="Path_91613" data-name="Path 91613" d="M277.435,110.687a4.636,4.636,0,0,1-4.636-4.636,4.636,4.636,0,0,1-9.271,0,4.636,4.636,0,1,1-9.271,0,4.636,4.636,0,0,1-9.271,0,4.632,4.632,0,0,1-8.3,2.827,23.637,23.637,0,0,0-3.543,12.484v12.98a25.755,25.755,0,0,0,51.511,0V121.362a23.642,23.642,0,0,0-3.543-12.484A4.626,4.626,0,0,1,277.435,110.687Z" transform="translate(-181.865 -86.864)" fill="#ededf0"/>
+    </g>
+  </g>
+</svg>

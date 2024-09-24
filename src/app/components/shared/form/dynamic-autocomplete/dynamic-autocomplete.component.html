@@ -1,0 +1,78 @@
+<div class="form-control-container">
+  <mat-label class="form-label">{{ label }}<app-tool-tip-icon *ngIf="tooltipHelp" [tooltipHelp]="tooltipHelp"></app-tool-tip-icon></mat-label>
+  <mat-form-field style="width: 100%"  [ngClass]="{ 'small': isSmall}">
+    <mat-select [placeholder]="placeholder" [formControl]="control">
+      <div class="search-inpout-container">
+        <mat-form-field
+          style="width: 100%; outline: none !important"
+          class="input-novalidate"
+        >
+          <input
+            style="width: 100%; outline: none !important"
+            type="text"
+            matInput
+            placeholder="{{ searchPlaceholder }}"
+            [formControl]="searchControl"
+          />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+      <mat-option *ngFor="let option of filteredOptionsComputed() | async" [value]="option.value">
+        {{ option.description }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="control.hasError('required')">
+      {{ errorMessageRequired }}
+    </mat-error>
+  </mat-form-field>
+</div>
+
+
+
+
+
+<!-- <div class="form-control-container">
+  <mat-label class="form-label"
+    >{{ label
+    }}<app-tool-tip-icon
+      *ngIf="tooltipHelp"
+      [tooltipHelp]="tooltipHelp"
+    ></app-tool-tip-icon
+  ></mat-label>
+  <mat-form-field style="width: 100%" [ngClass]="{ small: isSmall }">
+    <input
+      type="text"
+      [placeholder]="placeholder"
+      matInput
+      [formControl]="control"
+      [matAutocomplete]="auto"
+    /><mat-icon>keyboard_arrow_down</mat-icon>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+      <div class="search-inpout-container">
+        <mat-form-field
+          style="width: 100%; outline: none !important"
+          class="input-novalidate"
+        >
+          <input
+            style="width: 100%; outline: none !important"
+            type="text"
+            matInput
+            placeholder="{{ searchPlaceholder }}"
+            [formControl]="control"
+          />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <mat-option
+        *ngFor="let option of filteredOptionsComputed() | async"
+        [value]="option"
+      >
+        {{ option.description }}
+      </mat-option>
+    </mat-autocomplete>
+    <mat-error *ngIf="control.hasError('required')">
+      {{ errorMessageRequired }}
+    </mat-error>
+  </mat-form-field>
+</div> -->

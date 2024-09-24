@@ -1,0 +1,30 @@
+mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    // margin-top: 16px;
+    max-width: 384px;
+    max-height: 162px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+}
+
+mat-dialog-content {
+    color: #323235 !important;
+    max-width: 384px;
+    padding-top: 0px !important;
+    font-size: 14px !important;
+    margin-left: 6px !important;
+}
+
+h2 {
+    color: #323235 !important;
+    //font: normal normal bold 18px/22px Roboto;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin: 12px 12px 0px 6px !important;
+
+}
+
+.checkbox-margin {
+    margin-left: -10px !important;
+}

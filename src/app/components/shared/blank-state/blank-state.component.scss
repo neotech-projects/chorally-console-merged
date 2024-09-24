@@ -1,0 +1,13 @@
+.blank-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100% - 64px) !important;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background-color: #F7F7FA !important;
+  border: none;
+  top: 0;
+}

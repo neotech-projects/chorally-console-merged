@@ -1,0 +1,12 @@
+<svg id="Icona_-_Microsoft_365" data-name="Icona - Microsoft 365" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path id="Path_91131" data-name="Path 91131" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" fill="#9c72c9"/>
+  <g id="Microsoft_365_outlined" transform="translate(8 8)">
+    <rect id="Rectangle_16306" data-name="Rectangle 16306" width="16" height="16" fill="none"/>
+    <g id="Microsoft_365_outlined-2" data-name="Microsoft_365_outlined" transform="translate(0.095 -0.501)">
+      <path id="Path_91566" data-name="Path 91566" d="M13.87,3.54,9.37.92A3.093,3.093,0,0,0,6.35.87L6.26.92A2.862,2.862,0,0,0,4.81,3.39V6.81l1.45-.84a3.089,3.089,0,0,1,3.11,0l4.5,2.62a2.894,2.894,0,0,1,1.45,2.38V6.02a2.862,2.862,0,0,0-1.45-2.47Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Path_91567" data-name="Path 91567" d="M2.45,13.6l-.57-.34A2.87,2.87,0,0,1,.49,10.81V5.99A2.87,2.87,0,0,1,1.88,3.54L6.2.94s.05-.03.08-.05L6.2.94a2.359,2.359,0,0,0-.36.26l.23-.16" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Path_91568" data-name="Path 91568" d="M4.82,6.78V8.22a2.87,2.87,0,0,0,1.39,2.45L8.1,11.81" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Path_91569" data-name="Path 91569" d="M15.32,10.76v.3a2.854,2.854,0,0,1-1.39,2.44L9.61,16.09a2.9,2.9,0,0,1-2.98,0L2.41,13.56a2.9,2.9,0,0,0,2.88-.06l4.32-2.59A2.854,2.854,0,0,0,11,8.47V6.92" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg id="Icona_Google_My_Business" data-name="Icona Google My Business" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <circle id="Ellisse_1715" data-name="Ellisse 1715" cx="16" cy="16" r="16" fill="#4285f4"/>
+  <g id="Google_My_Business_outlined" data-name="Google My Business outlined" transform="translate(8 8)">
+    <rect id="Rettangolo_6771" data-name="Rettangolo 6771" width="16" height="16" fill="none"/>
+    <g id="icons8-google-business_3_" data-name="icons8-google-business (3)" transform="translate(0 0.667)">
+      <path id="Tracciato_89603" data-name="Tracciato 89603" d="M19.545,24v6.909a.727.727,0,0,1-.727.727H5.727A.727.727,0,0,1,5,30.909V24" transform="translate(-4.273 -17.091)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Tracciato_89604" data-name="Tracciato 89604" d="M7,10.273a2,2,0,1,1-4,0L4.233,5.8A1.091,1.091,0,0,1,5.285,5H16.715a1.091,1.091,0,0,1,1.052.8L19,10.273a2,2,0,0,1-4,0" transform="translate(-3 -5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Tracciato_89605" data-name="Tracciato 89605" d="M18,10.273a2,2,0,0,1-4,0L14.727,5" transform="translate(-10 -5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Tracciato_89606" data-name="Tracciato 89606" d="M28.273,5,29,10.273a2,2,0,1,1-4,0V5" transform="translate(-17 -5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <line id="Linea_17809" data-name="Linea 17809" x2="16" transform="translate(0 5.091)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Tracciato_89607" data-name="Tracciato 89607" d="M33.718,31.182H31.545v.727H32.9a1.635,1.635,0,1,1-.215-1.5l.521-.521a2.361,2.361,0,1,0,.522,1.478C33.727,31.3,33.723,31.242,33.718,31.182Z" transform="translate(-19.545 -20.273)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

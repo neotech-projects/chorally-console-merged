@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Icona_Youtube" data-name="Icona Youtube" transform="translate(6 8.924)">
+    <text id="Mail" transform="translate(10 12.076)" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1" font-size="13" font-family="Roboto-Regular, Roboto"><tspan x="-12.365" y="0">Mail</tspan></text>
+    <g id="Icona_mail" data-name="Icona mail" transform="translate(-6 -8.924)">
+      <path id="Path_91131" data-name="Path 91131" d="M16,0A16,16,0,1,1,0,16,16,16,0,0,1,16,0Z" fill="#f61c0d"/>
+    </g>
+    <g id="youtube-svgrepo-com" transform="translate(2 1)">
+      <path id="Path_91577" data-name="Path 91577" d="M12.677,67.393H3.323A3.323,3.323,0,0,0,0,70.716v4.676a3.323,3.323,0,0,0,3.323,3.323h9.354A3.323,3.323,0,0,0,16,75.392V70.716A3.323,3.323,0,0,0,12.677,67.393ZM10.43,73.281,6.055,75.368a.176.176,0,0,1-.251-.159v-4.3a.176.176,0,0,1,.255-.157l4.375,2.217A.176.176,0,0,1,10.43,73.281Z" transform="translate(0 -67.393)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

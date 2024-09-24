@@ -1,0 +1,47 @@
+<mat-card-header>
+    <div class="btn-container-label" >
+      <h2>Associazioni monitoring</h2>
+      <a 
+        (click)="onModify()"
+        class="btn"
+        matTooltip="Modifica"
+        matTooltipPosition="below"
+        matTooltipClass="tooltip"
+        matTooltipShowDelay="500"
+        matTooltipHideDelay="0"
+        [ngClass]="{ 'btn-blue-outline-border ': !onEdit, 'btn-blue': onEdit }"
+        style="margin-left: 400px;"
+      >
+        <mat-icon><span class="material-icons-outlined"> edit </span></mat-icon>
+      </a>
+    </div>    
+  </mat-card-header>
+  
+  <mat-card-content *ngIf="!onEdit">
+    <div *ngFor="let link of listAll">
+        <b>Progetto </b>
+        <p>{{link.nomeProgetto}}</p>
+        <b>Query </b>
+        <p>{{link.nomiQueriesProgettoCsv}}</p>        
+    </div>
+  </mat-card-content>
+
+  <mat-card-content *ngIf="onEdit">
+    <div *ngFor="let link of listAll">
+      <app-edit-brandwatch-link
+      [nomeCliente]= "link.nomeCliente"
+      [idCliente]= "link.idCliente"
+      [nomeProgetto] = "link.nomeProgetto"
+      [idProgetto] = "link.idProgetto"
+      [codiceProgetto]  = "link.codiceProgetto"
+      [fromInstanceDetail]= true    
+      ></app-edit-brandwatch-link>
+    </div>    
+
+    <a [routerLink]="['/settings/monitoring/add', clientName.toLowerCase()]">
+      <mat-icon><span class="material-icons-outlined"> add </span></mat-icon>
+      Aggiungi Progetto 
+    </a>
+
+  </mat-card-content>
+  

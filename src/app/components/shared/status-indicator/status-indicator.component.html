@@ -1,0 +1,15 @@
+<span [ngClass]="getStatusClass().class"
+  matTooltip="{{ getStatusClass().description }}"
+  matTooltipPosition="above"
+  matTooltipClass="tooltip"
+  matTooltipShowDelay="500"
+  matTooltipHideDelay="0"
+  matListItemIcon
+>
+  <mat-icon
+    [fontSet]="
+      getStatusClass().fill ? 'material-icons' : 'material-icons-outlined'
+    "
+    >{{ getStatusClass().icon }}</mat-icon
+  >{{ getStatusClass().description }}
+</span>

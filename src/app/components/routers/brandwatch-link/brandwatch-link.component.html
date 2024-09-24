@@ -1,0 +1,22 @@
+
+
+<app-add-brandwatch-link *ngIf="!isEdit"
+  #brandwatchLinkAdd
+  (listLinks)="handleListLinksUpdate($event)">
+</app-add-brandwatch-link>
+
+<app-edit-brandwatch-link *ngIf="isEdit"
+  #brandwatchLinkAdd
+  (listLinks)="handleListLinksUpdate($event)"
+  [idCliente]="idCliente"
+  [idProgetto]="idProgetto"
+  [nomeCliente]="nomeCliente"
+  [nomeProgetto]="nomeProgetto"
+  >
+</app-edit-brandwatch-link>
+
+
+<app-list-brandwatch-link 
+  [listQueriesLink]="listQueriesLink" 
+  (associationRemoved)="onAssociationRemoved()">
+</app-list-brandwatch-link>

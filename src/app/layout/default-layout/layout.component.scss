@@ -1,0 +1,33 @@
+
+
+.content {
+    // padding: 24px;
+    background-color: #F7F7FA;
+    // border-radius: 5px;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-large {
+    margin-left: 0px !important;
+    transition: all 500ms ease-in-out;
+}
+
+.content-small {
+    transition: all 500ms ease-in-out;
+}
+
+mat-sidenav-container {
+    height: calc(100%);
+    transition: all 500ms ease-in-out;
+}
+
+.sidenav-parent {
+    background-color: #016176;
+    transition: all 500ms ease-in-out;
+}
+
+
+.sidenav-children {
+    background-color: #f2f2f5;
+    transition: all 500ms ease-in-out;
+}

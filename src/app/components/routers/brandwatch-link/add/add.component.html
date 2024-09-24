@@ -1,0 +1,92 @@
+<mat-toolbar>
+    <div class="header-bar">        
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item-active">
+                <a  [routerLink]="'/settings'">{{ "IMPOSTAZIONI" }}</a>
+            </li>
+            <li class="breadcrumb-item-active">
+                <a  [routerLink]="'/settings/monitoring'">{{ "MONITORING" }}</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a>{{'AGGIUNGI ASSOCIAZIONI'}} {{clienteFromInstance}}</a>
+            </li>
+        </ol>
+    </div>
+</mat-toolbar>
+
+<div class="container" style="width: 40%; background-color: white; padding: 20px;">
+    <p>Per visualizzare i dati di interesse di un progetto 
+       collega le query. Successivamente potrai sempre 
+       modificare le impostazioni cliccando su "modifica".               
+    </p>
+
+    <!-- Sezione cliente -->
+    <div *ngIf="listClients.length" class="form-control-container">
+        <mat-form-field style="width: 100%" class="small" >
+            <mat-label>Seleziona cliente</mat-label>
+            <mat-select [(ngModel)]="selectedClient" (selectionChange)="onClientSelected($event.value)" [disabled]="clienteFromInstance !== ''">
+                <mat-option *ngFor="let client of listClients" [value]="client.idCliente">
+                    {{ client.nomeCliente }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+
+    <!-- Sezione progetto -->
+    <div *ngIf="listProjectsBWClient.length" class="form-control-container">
+        <mat-form-field style="width: 100%" class="small">
+            <mat-label>Seleziona progetto</mat-label>
+            <mat-select [(ngModel)]="selectedProjectCode" (selectionChange)="onProjectBWSelected($event.value)">
+                <mat-option *ngFor="let project of listProjectsBWClient" [value]="project.codiceProgetto">
+                    {{ project.nomeProgetto }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>        
+    </div>
+    
+    <!--
+    <div *ngIf="!listProjectsBWClient.length">
+        Nessun progetto trovato.
+    </div>
+    -->
+
+    <!-- Sezione query -->
+    <div *ngIf="listQueriesProjectsBW.length" class="form-control-container">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="listQueriesProjectsBW.length" >
+
+            <!-- Toggle stato -->
+            <div style="width: 50%" >
+                <app-switch 
+                    [checked]="stateProject.value ?? false"  
+                    [control]="stateProject"  
+                    [label]="'Stato Progetto'" 
+                    (change)="onStatoProgettoChange($event)">
+                </app-switch>
+            </div>
+
+            <mat-form-field style="width: 100%" class="small">
+                <mat-label>Seleziona query</mat-label>
+                <mat-select formControlName="queries" multiple (selectionChange)="onQueriesSelectionChange($event)">
+                    <mat-option *ngFor="let query of listQueriesProjectsBW" [value]="query.codiceQuery">
+                        {{ query.nomeQuery }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div class="form-control-container" style="width:50%">
+                <button
+                mat-stroked-button
+                class="form-button-cancel"
+                style="margin-right: 150px;"
+                [routerLink]="['/settings/monitoring/']"
+                type="button">
+                Annulla
+                </button>
+        
+                <button type="submit" mat-flat-button class="form-button-confirm">Salva</button>
+            </div>
+            
+        </form>
+    </div>
+</div>

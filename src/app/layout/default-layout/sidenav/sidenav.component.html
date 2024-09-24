@@ -1,0 +1,66 @@
+<div class="sidenav-header" (click)="changeCollapsed()">
+  <div class="sidenav-header__logo">
+    <img src="assets/images/cropped-chorally-icon.webp" alt="logo" />
+  </div>
+</div>
+<mat-nav-list>
+  <a
+    mat-list-item
+    class="menu-item"
+    *ngFor="let item of menuItems()"
+    [routerLink]="item.route"
+    routerLinkActive="selected-menu-item"
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+  >
+    <div class="list-item-container">
+      <mat-chip
+        [ngClass]="{
+          'chip-disactive': !rla.isActive,
+          ' chip-active': rla.isActive
+        }"
+      >
+        <mat-icon
+          matListItemIcon
+          >
+          <!-- <span [ngClass]="{'material-icons' : rla.isActive,' material-icons-outlined': ! rla.isActive }"> -->
+            <span class="material-icons">
+            {{ item.icon }}
+            </span></mat-icon
+        >
+      </mat-chip>
+      <span class="list-item-text">{{ item.name }}</span>
+    </div>
+  </a>
+</mat-nav-list>
+<mat-nav-list class="menu-items-bottom">
+  <a
+    mat-list-item
+    class="menu-item"
+    *ngFor="let item of menuItemsBottom()"
+    [routerLink]="item.route ? item.route : null"
+    routerLinkActive="selected-menu-item"
+    #rla="routerLinkActive"
+    [activated]="rla.isActive"
+    (click)="item.action ? item.action() : null"
+  >
+    <div class="list-item-container">
+      <mat-chip
+        [ngClass]="{
+          'chip-disactive': !rla.isActive,
+          ' chip-active': rla.isActive
+        }"
+      >
+        <mat-icon
+          [fontSet]="
+            rla.isActive ? 'material-icons' : 'material-icons-outlined'
+          "
+          matListItemIcon
+          >
+          <span class="material-icons">{{ item.icon }}</span></mat-icon
+        >
+      </mat-chip>
+      <span class="list-item-text">{{ item.name }}</span>
+    </div>
+  </a>
+</mat-nav-list>

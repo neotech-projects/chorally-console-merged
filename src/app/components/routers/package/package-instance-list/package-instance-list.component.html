@@ -1,0 +1,21 @@
+<hr />
+<div class="container-label">
+  <h2 class="title">Istanze collegate</h2>
+</div>
+<div *ngFor="let client of item().clients">
+  <p class="label-card">
+    <a
+      href="http://{{ client.domain }}"
+      target="_blank"
+      class="domain-link"
+      style="text-decoration: none !important"
+      >{{ client.domainName }}
+      <mat-icon style="font-size: 18px; width: 18px; height: 18px"
+        >open_in_new</mat-icon
+      >
+    </a>
+  </p>
+  <p>
+    {{ client.domain }}
+  </p>
+</div>

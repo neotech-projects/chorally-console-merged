@@ -1,0 +1,22 @@
+.detail-card {
+    height: calc(100vh - 64px);
+  }
+  
+  .label-card {
+    // testo in grassetto
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  .container-label {
+    display: flex;
+    justify-content: space-between;
+    // width: 320px; // 
+    width: 100%;
+  }
+  
+  .btn-container-label {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }

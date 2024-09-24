@@ -1,0 +1,35 @@
+.mat-button-toggle-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.mat-button-toggle {
+  border-radius: 10px;
+//   margin-right: 20px;
+    font-weight: 500;
+}
+
+.mat-button-toggle-checked {
+  color: white;
+}
+
+.button-border-color {
+  border: 1px solid #00000026 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0px 1px 3px #00000026;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.button-border-color-checked {
+  border: 2px solid #0161a3 !important;
+  background-color: #ffffff !important;
+  //   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px #00000026;
+  border-radius: 10px;
+  width: 100%;
+}

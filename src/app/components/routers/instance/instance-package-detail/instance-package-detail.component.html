@@ -1,0 +1,89 @@
+<app-package-sub-detail
+  [item]="item"
+  [onEditInstance]="onEdit"
+  (onClick)="onEdit = !onEdit"
+  [fromInstance]="true"
+></app-package-sub-detail>
+
+<div class="container" *ngIf="onEdit">
+  <p>
+    In questa sezione, puoi scegliere tra pacchetti di servizi esistenti o
+    regolare la configurazione dei componenti per rispondere alle esigenze
+    specifiche del cliente
+  </p>
+  <form [formGroup]="options" (submit)="onOperation(operation.Update)">
+    <!-- <app-dynamic-autocomplete
+      label="Cambia pacchetto"
+      placeholder="Seleziona"
+      [control]="packageIdControl"
+      errorMessageRequired="Seleziona un pacchetto"
+      [options]="packageList()"
+      [filteredOptions]="packageList"
+    ></app-dynamic-autocomplete>
+
+    <br>
+
+    <app-switch [label]="'Modifica componenti'" [control]="showPackageControl" (change)="changePachage()"></app-switch>
+
+    <br>
+    <app-package-form
+      *ngIf="showPackageControl.value && (packageComputed() | async)"
+      [id]="item().id + ''"
+      [title]="'title'"
+      [channelsList]="channelsList"
+      [modulesList]="modulesList"
+      [functionsList]="functionsList"
+      (operationEvent)="onOperation($event)"
+      [item]="item"
+      [options]="options"
+      [showName]="false"
+      [expanded]="false"
+    ></app-package-form> -->
+
+    <div class="container-row">
+      <app-dynamic-autocomplete
+        style="min-width: 640px"
+        label="Cambia pacchetto"
+        placeholder="Scegli esistente"
+        [control]="packageIdControl"
+        errorMessageRequired="Seleziona un pacchetto"
+        [options]="packageList()"
+        [filteredOptions]="packageList"
+      ></app-dynamic-autocomplete>
+      <a
+        (click)="openPackageDialog()"
+        class="btn btn-blue-outline-border"
+        [style.pointer-events]="!packageIdControl.value ? 'none' : 'auto'"
+        [style.opacity]="!packageIdControl.value ? '0.5' : '1'"
+        [style.margin-bottom]="'4px'"
+        matTooltip="Modifica"
+        matTooltipPosition="below"
+        matTooltipClass="tooltip"
+        matTooltipShowDelay="500"
+        matTooltipHideDelay="0"
+      >
+        <mat-icon>description</mat-icon>
+      </a>
+    </div>
+
+    <!-- button -->
+    <div class="form-button-container">
+      <button
+        mat-stroked-button
+        class="form-button-cancel"
+        type="button"
+        (click)="onOperation(operation.Cancel)"
+      >
+        Annulla
+      </button>
+      <button
+        mat-flat-button
+        class="form-button-confirm"
+        type="submit"
+        [disabled]="!options.valid"
+      >
+        Salva
+      </button>
+    </div>
+  </form>
+</div>

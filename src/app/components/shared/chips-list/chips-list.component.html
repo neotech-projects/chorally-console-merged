@@ -1,0 +1,31 @@
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpen = true"
+    (closed)="panelOpen = false"
+    [expanded]="expanded"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title> Canali* </mat-panel-title>
+      <mat-panel-description> </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-chip-set aria-label="Canali">
+      <mat-chip
+        *ngFor="let channel of channels()"
+        [removable]="true"
+        (click)="onSelect(channel)"
+        [ngClass]="{ 'mat-chip-selected': channel.selected }"
+      >
+        <img
+          matChipAvatar
+          [src]="channel.icon"
+          alt="channel"
+          [ngClass]="{ 'mat-chip-img-selected': channel.selected }"
+        />
+        <span [ngClass]="{ 'mat-chip-label-selected': channel.selected }">
+          {{ channel.description }}
+        </span>
+      </mat-chip>
+    </mat-chip-set>
+  </mat-expansion-panel>
+</mat-accordion>

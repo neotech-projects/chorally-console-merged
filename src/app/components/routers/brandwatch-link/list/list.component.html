@@ -1,0 +1,34 @@
+<div class="container" style="width: 40%; background-color: white; padding: 20px;">
+<table mat-table *ngIf="listQueriesLink.length > 0" [dataSource]="listQueriesLink">
+  <!-- Cliente Column -->
+  <ng-container matColumnDef="cliente">
+    <th mat-header-cell *matHeaderCellDef> CLIENTE </th>
+    <td mat-cell *matCellDef="let element"> {{element.nomeCliente}} </td>
+  </ng-container>
+
+  <!-- Progetto BW Column -->
+  <ng-container matColumnDef="progetto">
+    <th mat-header-cell *matHeaderCellDef> PROGETTO</th>
+    <td mat-cell *matCellDef="let element"> {{element.nomeProgettoReal}} </td>
+  </ng-container>
+
+  <!-- Query BW Column -->
+  <ng-container matColumnDef="query">
+    <th mat-header-cell *matHeaderCellDef> QUERY </th>
+    <td mat-cell *matCellDef="let element"> {{element.nomeQuery}} </td> <!-- Aggiornato per mostrare nomeQuery -->
+  </ng-container>
+
+  <!-- Action Column -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Azione </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button color="warn" (click)="dissocia(element)">            
+        <mat-icon title="Elimina">delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>  

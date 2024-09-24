@@ -1,0 +1,55 @@
+<div class="container-label">
+  <h2 class="title">Dati pacchetto</h2>
+  <div class="btn-container-label" *ngIf="showActions && !viewInModal">
+    <a
+      *ngIf="!fromInstance"
+      (click)="onDuplicate()"
+      class="btn btn-blue-outline-border"
+      matTooltip="Copia"
+      matTooltipPosition="below"
+      matTooltipClass="tooltip"
+      matTooltipShowDelay="500"
+      matTooltipHideDelay="0"
+    >
+      <mat-icon>content_copy</mat-icon>
+    </a>
+    <a
+      *ngIf="fromInstance"
+      (click)="onClickEvent()"
+      class="btn btn-blue-outline-border"
+      [ngClass]="{
+        'btn-blue-outline-border': !onEditInstance,
+        'btn-blue': onEditInstance
+      }"
+      matTooltip="Modifica"
+      matTooltipPosition="below"
+      matTooltipClass="tooltip"
+      matTooltipShowDelay="500"
+      matTooltipHideDelay="0"
+    >
+      <mat-icon><span class="material-icons-outlined"> edit </span></mat-icon>
+    </a>
+    <a
+      *ngIf="!fromInstance"
+      [routerLink]="'/packages/edit/' + item().id"
+      class="btn btn-blue-outline-border"
+      matTooltip="Modifica"
+      matTooltipPosition="below"
+      matTooltipClass="tooltip"
+      matTooltipShowDelay="500"
+      matTooltipHideDelay="0"
+    >
+      <mat-icon><span class="material-icons-outlined"> edit </span></mat-icon>
+    </a>
+  </div>
+</div>
+<ng-container *ngIf="!onEditInstance">
+  <p class="label-card">Nome pacchetto:</p>
+  <p>{{ item().name }}</p>
+  <p class="label-card">Canali attivi:</p>
+  <p>{{ getChannelsNames(item().channels) }}</p>
+  <p class="label-card">Moduli:</p>
+  <p>{{ getModuleNames(item().modules) }}</p>
+  <p class="label-card">Funzionalità:</p>
+  <p>{{ getFunctionNames(item().functions) }}</p>
+</ng-container>

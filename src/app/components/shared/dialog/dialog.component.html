@@ -1,0 +1,37 @@
+<h2 mat-dialog-title>{{ title() }}</h2>
+<mat-dialog-content>
+  <p>{{ message() }}</p>
+  <p *ngIf="needToDoubleConfirm()">
+    <span class="checkbox-list-section">
+      <mat-checkbox
+        class="checkbox-margin"
+        [checked]="doubleConfirmValue"
+        [color]="'primary'"
+        (change)="doubleConfirmValue = $event.checked"
+      >
+        {{ doubleConfirmLable() }}
+      </mat-checkbox>
+    </span>
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    *ngIf="dissmissButton()"
+    class="form-button-cancel"
+    mat-button
+    mat-dialog-close
+  >
+    {{ dissmissButton() }}
+  </button>
+  <button
+    *ngIf="confirmButton()"
+    class="form-button-confirm"
+    mat-button
+    mat-dialog-close
+    (click)="function()"
+    [disabled]="needToDoubleConfirm() && !doubleConfirmValue"
+  >
+    {{ confirmButton() }}
+  </button>
+</mat-dialog-actions>
+

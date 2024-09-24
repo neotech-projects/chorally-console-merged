@@ -1,0 +1,30 @@
+<mat-toolbar *ngIf="!viewInModal">
+  <div class="header-bar">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item-active">
+        <a [routerLink]="'/packages'">{{ "PACCHETTI" }}</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a *ngIf="item().name">{{ item().name }}</a>
+      </li>
+    </ol>
+    <a
+      (click)="delete()"
+      class="btn btn-violet-outline position-end"
+      *ngIf="id && !(item().clients && item().clients.length)"
+    >
+      <mat-icon>delete</mat-icon>
+    </a>
+  </div>
+</mat-toolbar>
+<div class="container" [ngClass]="viewInModal ? 'container-detail-small' : 'container-detail'">
+  <app-package-sub-detail
+    [viewInModal]="viewInModal"
+    [item]="item"
+    (duplicate)="duplicate()"
+  ></app-package-sub-detail>
+  <app-package-instance-list
+    [item]="item"
+    *ngIf="item().clients"
+  ></app-package-instance-list>
+</div>

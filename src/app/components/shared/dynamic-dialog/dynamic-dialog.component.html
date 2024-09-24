@@ -1,0 +1,22 @@
+<mat-dialog-content *ngIf="data.message">{{ data.message }}</mat-dialog-content>
+<mat-dialog-content  class="scrollable-content" #dynamicContent></mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    *ngIf="data.dissmissButton"
+    mat-button
+    mat-dialog-close
+    class="form-button-cancel"
+  >
+    {{ data.dissmissButton }}
+  </button>
+  <button
+    *ngIf="data.confirmButton"
+    mat-button
+    mat-dialog-close
+    cdkFocusInitial
+    (click)="data.function()"
+    class="form-button-confirm"
+  >
+    {{ data.confirmButton }}
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,11 @@
+<p class="switch-container">
+  {{ label }}
+  <label class="switch">
+    <input
+      type="checkbox"
+      [attr.checked]="control.value ? 'checked' : null"
+      (change)="onToggle()"
+    />
+    <span class="slider round"></span>
+  </label>
+</p>

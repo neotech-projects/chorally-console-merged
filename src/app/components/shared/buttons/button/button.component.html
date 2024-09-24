@@ -1,0 +1,17 @@
+<a
+  *ngIf="!routerLink"
+  (click)="handleClick()"
+  [ngClass]="class"
+  [style.pointer-events]="disabled ? 'none' : 'auto'"
+  [style.opacity]="disabled ? '0.5' : '1'"
+  [style.margin-bottom]="marginBottom"
+  matTooltip="{{ tooltip }}"
+  matTooltipPosition="below"
+  matTooltipClass="tooltip"
+  matTooltipShowDelay="500"
+  matTooltipHideDelay="0"
+>
+  <mat-icon
+    ><span class="{{ classIcon }}">{{ icon }}</span></mat-icon
+  >
+</a> 
